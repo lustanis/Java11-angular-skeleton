@@ -1,0 +1,12 @@
+com\fortna\routing\gateway\api\config\UserSecurityService.class
+com\fortna\routing\gateway\api\repository\UserRepository.class
+com\fortna\routing\gateway\api\config\AuthenticationConfigConstants.class
+com\fortna\routing\gateway\api\config\JWTAuthorizationFilter.class
+com\fortna\routing\gateway\api\config\WebConfiguration.class
+com\fortna\routing\gateway\api\config\JWTAuthenticationFilter.class
+com\fortna\routing\gateway\api\entity\User.class
+com\fortna\routing\gateway\api\config\SecurityConfiguration.class
+com\fortna\routing\gateway\api\controller\UserController.class
+com\fortna\routing\gateway\GatewayApplication.class
+com\fortna\routing\gateway\api\service\UserService.class
+com\fortna\routing\gateway\api\dto\UserData.class
