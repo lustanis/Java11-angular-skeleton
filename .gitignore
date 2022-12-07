@@ -28,6 +28,9 @@ bin/
 ### Mac OS ###
 .DS_Store
 .idea
-/db.db.mv.db
-/db.db.trace.db
+db.db.mv.db
+db.db.trace.db
 *.iml
+/.idea/
+
+/be/target/
