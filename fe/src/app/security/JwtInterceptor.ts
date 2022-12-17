@@ -5,9 +5,7 @@ import { EMPTY } from 'rxjs';
 import {SecurityService} from './SecurityService';
 import {Router} from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class JwtInterceptor implements HttpInterceptor {
   constructor(private security: SecurityService, private router: Router) {}
 
@@ -17,8 +15,7 @@ export class JwtInterceptor implements HttpInterceptor {
       this.router.navigate(['login']);
       return EMPTY;
     }
-    req.headers.set('Authorization', `Bearer ${token}`);
-    return next.handle(req);
+    return next.handle(req.clone({headers: req.headers.set("Authorization", token)}));
   }
 
 }
