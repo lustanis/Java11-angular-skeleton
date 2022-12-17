@@ -11,7 +11,7 @@ export class SecurityService {
 
   async login(username: string, password: string) {
     const response = await firstValueFrom(this.httpClient.post('/login', {username, password}, {observe: 'response'}));
-    if(response.headers.has('Authorization')) {
+    if(response.headers.has('Authorization') && <string>response.headers.get('Authorization')) {
       localStorage.setItem('authToken', <string>response.headers.get('Authorization'));
     }
   }
