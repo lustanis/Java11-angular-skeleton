@@ -7,12 +7,17 @@ import {LoginForm} from './security/loginForm/LoginForm.component';
 import {HttpClientModule} from '@angular/common/http';
 import {routing} from './app.routes';
 import {FormsModule} from '@angular/forms';
+import {Page1} from './view/page1/Page1.component';
+import {Page2} from './view/page2/Page2.component';
+import {Home} from './view/Home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginForm
-
+    LoginForm,
+    Page1,
+    Page2,
+    Home
   ],
   imports: [
     BrowserModule,
