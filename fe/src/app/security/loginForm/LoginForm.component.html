@@ -1,0 +1,4 @@
+login form
+<input placeholder="user" #username>
+<input placeholder="password" #password>
+<button (click)="this.securityService.login(username.value, password.value)">login</button>
