@@ -34,3 +34,4 @@ db.db.trace.db
 /.idea/
 
 /be/target/
+/fe/target/
