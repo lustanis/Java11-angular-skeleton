@@ -1,19 +1,33 @@
-
+<span class="form-inline">
+  <select
+    class="form-control"
+    #selectedLang
+    (change)="switchLang(selectedLang.value)"
+  >
+    <option
+      *ngFor="let language of translate.getLangs()"
+      [value]="language"
+      [selected]="language === translate.currentLang"
+    >
+      {{ language }}
+    </option>
+  </select>
+</span>
 <div class="container" *ngIf="security.getToken(); else login">
-
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li><a [routerLink]="['home']">Home</a></li>
         <li><a [routerLink]="['page1']">Product</a></li>
         <li><a [routerLink]="['page2']">Contact us</a></li>
-        <li><button (click)="security.logout()">log out</button></li>
+        <li>
+          <button (click)="security.logout()">log out</button>
+        </li>
       </ul>
     </div>
   </nav>
 
   <router-outlet></router-outlet>
-
 </div>
 <ng-template #login>
   <login-form></login-form>
