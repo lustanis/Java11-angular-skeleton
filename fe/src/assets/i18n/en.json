@@ -2,6 +2,6 @@
   "login": {
     "userName": "User Name",
     "password": "password",
-    "login": "Login"
+    "login_button_text": "Login"
   }
 }

@@ -1,3 +1,3 @@
 <input placeholder="{{'login.userName' | translate }}" #username>
 <input placeholder="{{'login.password' | translate }}" #password>
-<button (click)="this.securityService.login(username.value, password.value)">{{'login.login' | translate}}</button>
+<button (click)="this.securityService.login(username.value, password.value)" translate="login.login_button_text"></button>
