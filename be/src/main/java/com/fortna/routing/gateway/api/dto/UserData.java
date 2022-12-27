@@ -7,3 +7,4 @@ public class UserData {
     final public String username;
     final public String password;
 }
+//public record UserData (String username, String password){}

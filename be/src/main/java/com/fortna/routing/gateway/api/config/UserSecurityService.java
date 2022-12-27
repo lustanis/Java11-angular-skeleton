@@ -7,10 +7,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -22,10 +20,10 @@ public class UserSecurityService implements UserDetailsService {
     @SneakyThrows
     @Override
     public UserDetails loadUserByUsername(String username) {
-        var apiUser = userRepository.findByUsername(username).orElseThrow(EntityNotFoundException::new);
-        if (apiUser == null) {
-            throw new UsernameNotFoundException(username);
-        }
+        var apiUser = userRepository
+                .findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User '" + username + "' Not Found!"));
+
         return new org.springframework.security.core.userdetails.User(apiUser.getUsername(), apiUser.getPassword(), List.of(
                 new SimpleGrantedAuthority("authority-1"),
                 new SimpleGrantedAuthority("ROLE_admin")

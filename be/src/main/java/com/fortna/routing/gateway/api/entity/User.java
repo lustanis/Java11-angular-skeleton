@@ -1,8 +1,8 @@
 package com.fortna.routing.gateway.api.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
 
 
 @Entity
