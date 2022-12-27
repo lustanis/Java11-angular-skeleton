@@ -11,7 +11,7 @@
 
   <artifactId>fe</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>demo-fe</name>
+  <name>front-end-demo</name>
   <description>Demo project for Spring Boot</description>
 
 
