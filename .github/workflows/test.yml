@@ -186,4 +186,4 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         env:
-          SNYK_TOKEN: 8da89502-03b8-4836-8c71-36156f4ea5d7
+          SNYK_TOKEN: c313fc79-85f2-4b77-9845-fb562ae550b0
